@@ -37,6 +37,11 @@ In your template write this code.
 <keypad [showPeriod]="true" [isPassword]="false" [(data)]="result"></keypad>
 ```
 
+## Screenshot
+
+![image](https://user-images.githubusercontent.com/23718443/216028355-41d18056-b973-4d84-99bf-895b17fb9e3f.png)
+
+
 ## Properties
 
 | Property | Description | Type | Default |
