@@ -34,7 +34,7 @@ export class AppModule {
 
 In your template write this code.
 ```html
-<keypad [showPeriod]="true" [isPassword]="false" [(data)]="result"></keypad>
+<keypad [isPassword]="false" [(data)]="result"></keypad>
 ```
 
 ## Screenshot
