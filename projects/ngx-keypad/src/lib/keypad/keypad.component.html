@@ -50,13 +50,14 @@
 
 
 <div class="row mt-3">
-  <div class="col-{{_showTwoZeros === true?'4':'8'}}">
-    <button class="btn btn-primary btn-block" (click)="insert('0')">0</button>
+  <div class="col-4">
+    <button class="btn btn-primary btn-block" (click)="insert('*')">*</button>
   </div>
-  <div class="col-4" *ngIf="_showTwoZeros">
-    <button class="btn btn-primary btn-block" (click)="insert('0');insert('0');">00</button>
+  <div class="col-4">
+    <button class="btn btn-primary btn-block" (click)="insert('0');">0</button>
   </div>
-  <div class="col-4" *ngIf="_showPeriod">
-    <button class="btn btn-primary btn-block" (click)="insert('.')">.</button>
+  <div class="col-4">
+    <button class="btn btn-primary btn-block" (click)="insert('#');">#</button>
   </div>
+ 
 </div>

@@ -1,11 +1,11 @@
 <h1>Options</h1>
-<input type="checkbox" id="togglePeriod" name="togglePeriod" [checked]="showPeriod" (change)="togglePeriod()" />
+<!-- <input type="checkbox" id="togglePeriod" name="togglePeriod" [checked]="showPeriod" (change)="togglePeriod()" />
 <label for="togglePeriod"> Period </label>
-<br>
+<br> -->
 
-<input type="checkbox" id="toggleTwoZeros" name="toggleTwoZeros" [checked]="showTwoZeros" (change)="toggleTwoZeros()" />
+<!-- <input type="checkbox" id="toggleTwoZeros" name="toggleTwoZeros" [checked]="showTwoZeros" (change)="toggleTwoZeros()" />
 <label for="toggleTwoZeros"> Two Zeros </label>
-<br>
+<br> -->
 
 <input type="checkbox" id="togglePassword" name="togglePassword" [checked]="isPassword" (change)="togglePassword()" />
 <label for="togglePassword"> Is Password </label>
@@ -19,9 +19,9 @@
 <label for="maxLength"> Maximum Length </label>
 <br>
 
-<input type="number" id="maxNumber" name="maxNumber" [value]="maxNumber" (change)="onChangeMaxNumber($event)" />
+<!-- <input type="number" id="maxNumber" name="maxNumber" [value]="maxNumber" (change)="onChangeMaxNumber($event)" />
 <label for="maxNumber"> Maximum Number </label>
-<br>
+<br> -->
 
 <br>
 <span>Result: {{result}}</span>
@@ -33,8 +33,8 @@
 <hr>
 <h1>Component</h1>
 <div style="width: 400px;">
-  <keypad [showTwoZeros]="showTwoZeros" [showDisplay]="isDisplay" [showPeriod]="showPeriod" [isPassword]="isPassword" 
-    [maxLength]="maxLength" [maxNumber]="maxNumber" [(data)]="result" (dataChange)="onChange($event)"></keypad>
+  <keypad [showDisplay]="isDisplay" [isPassword]="isPassword" 
+    [maxLength]="maxLength" [(data)]="result" (dataChange)="onChange($event)"></keypad>
 </div>
 <hr>
 

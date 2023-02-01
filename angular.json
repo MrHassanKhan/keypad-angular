@@ -71,8 +71,7 @@
             "styles": [
               "sample/styles.scss"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -163,5 +162,8 @@
       }
     }
   },
-  "defaultProject": "ngx-keypad-demo"
+  "defaultProject": "ngx-keypad-demo",
+  "cli": {
+    "analytics": false
+  }
 }

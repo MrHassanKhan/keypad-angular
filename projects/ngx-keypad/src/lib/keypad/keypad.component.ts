@@ -37,17 +37,17 @@ export class KeypadComponent implements OnInit, OnChanges {
     this._showDisplay = value;
   }
 
-  _showTwoZeros = false;
-  @Input('showTwoZeros')
-  set showTwoZeros(value: boolean) {
-    this._showTwoZeros = value;
-  }
+  // _showTwoZeros = false;
+  // @Input('showTwoZeros')
+  // set showTwoZeros(value: boolean) {
+  //   this._showTwoZeros = value;
+  // }
 
-  _showPeriod = true;
-  @Input('showPeriod')
-  set showPeriod(value: boolean) {
-    this._showPeriod = value;
-  }
+  // _showPeriod = true;
+  // @Input('showPeriod')
+  // set showPeriod(value: boolean) {
+  //   this._showPeriod = value;
+  // }
 
   _isPassword = false;
   @Input('isPassword')
@@ -131,7 +131,7 @@ export class KeypadComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-    this._data = KeypadService.clearData(this.data, this._showPeriod, this._maxLength, this._maxNumber);
+    this._data = KeypadService.clearData(this.data, true, this._maxLength, this._maxNumber);
     this.maskIfPassword(this._isPassword);
   }
 
@@ -144,7 +144,7 @@ export class KeypadComponent implements OnInit, OnChanges {
   }
 
   insert(character: string): void {
-    this.data = KeypadService.insertChar(this._data, character, this._showPeriod, this._maxLength, this._maxNumber);
+    this.data = KeypadService.insertChar(this._data, character, true, this._maxLength, this._maxNumber);
     this.updateKeyPressed(character);
   }
 
@@ -159,7 +159,7 @@ export class KeypadComponent implements OnInit, OnChanges {
   }
 
   updateKeyPressed(key) {
-    if (KeypadService.validChar(this.data, key, this._showPeriod, this._maxLength, this._maxNumber)) {
+    if (KeypadService.validChar(this.data, key, true, this._maxLength, this._maxNumber)) {
       this.keyPressed = this.data.substr(this.data.length - 1);
     }
   }

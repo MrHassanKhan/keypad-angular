@@ -50,8 +50,8 @@ export class KeypadService {
       return value;
     }
 
-    if ((showPeriod) && (character === ',' || character === '.')) {
-      return value + '.';
+    if ((showPeriod) && (character === '*' || character === '#')) {
+      return value + character;
     }
 
     if (isNaN(parseInt(character))) {
